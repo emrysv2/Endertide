@@ -1,4 +1,4 @@
-/* VortexWatch — Steam-inspired theme */
+/* ENDERTIDE — Steam-inspired theme */
 
 :root {
     --bg-header: #171a21;
@@ -8,8 +8,8 @@
     --text: #c6d4df;
     --text-dim: #8f98a0;
     --white: #fff;
-    --accent: #66c0f4;
-    --accent-strong: #1a9fff;
+    --accent: #ff55ff;
+    --accent-strong: #ff00ff;
     --content: 1000px;
     --gutter: 20px;
     color-scheme: dark;
@@ -29,7 +29,7 @@ body {
     color: var(--text);
     background-color: var(--bg-page);
     background-image:
-        radial-gradient(ellipse 90% 380px at 50% 0, rgba(102, 192, 244, 0.13), transparent),
+        radial-gradient(ellipse 90% 380px at 50% 0, rgba(255, 0, 255, 0.12), transparent),
         linear-gradient(180deg, var(--bg-page), var(--bg-page-deep));
 }
 
@@ -69,10 +69,6 @@ img {
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--white);
-}
-
-.logo span {
     color: var(--accent);
 }
 
@@ -102,7 +98,7 @@ img {
 
 .nav-links a:hover {
     color: var(--white);
-    border-bottom-color: rgba(26, 159, 255, 0.5);
+    border-bottom-color: rgba(255, 0, 255, 0.5);
 }
 
 .nav-links a.active {
@@ -126,7 +122,7 @@ img {
     font-weight: 300;
     line-height: 1.2;
     color: var(--white);
-    background: linear-gradient(90deg, rgba(61, 108, 142, 0.55), rgba(42, 71, 94, 0.15));
+    background: linear-gradient(90deg, rgba(255, 0, 255, 0.26), rgba(255, 0, 255, 0.04));
     border-left: 3px solid var(--accent);
 }
 

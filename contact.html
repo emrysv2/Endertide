@@ -1,87 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Contact The ENDERTIDE Team!</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENDERTIDE | Support</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
+<nav class="navbar">
+    <div class="logo">Endertide</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+    </ul>
+</nav>
+
+<h1>How to contact us!</h1>
+
+<h2>Email: endertide.online@gmail.com (this is a temporary email)</h2>
+
+<h3>If this project is not dead by the time you see this lol, we should respond every 24-96 hours</h3>
   
-<section>
-<h1>Contact VortexWatch!</h1>
-<p class="tagline">
-Contact us! We may reply in 24-96 hours.
-</p>
-<a href="index.html" class="btn secondary">← Back to Home</a>
-</section>
+<h2></h2>
   
-<main class="content">
-
-<section>
-<h2>Contact Us</h2>
-<p>Please have patience. We only have 2 staff members.</p>
-
-<form id="whitelistForm">
-
-<label for="email">Your Email:</label><br>
-<input type="email" id="email" placeholder="Your Email" required><br><br>
-
-<label for="message">What you want to say:</label><br>
-<textarea id="message" placeholder="Write your message..." required></textarea><br><br>
-
-<button type="submit" class="btn primary">Send Message</button>
-
-</form>
-
-<p id="status" class="note"></p>
-
-</section>
-
-</main>
-
-<script>
-const webhookURL = "https://discord.com/api/webhooks/1474580220991508552/tNLMUG6G8BXK3etiCPfH0IRZi0mB3N84MSKE4mcU4mSbirsrxZf6kHjh9XL2WUoOVFNH";
-
-const form = document.getElementById("whitelistForm");
-const status = document.getElementById("status");
-
-form.addEventListener("submit", function(e) {
-e.preventDefault();
-
-const email = document.getElementById("email").value;
-const message = document.getElementById("message").value;
-
-const payload = {
-embeds: [{
-title: "New Contact Form Submission",
-color: 5814783,
-fields: [
-{ name: "Email", value: email },
-{ name: "Message", value: message }
-],
-timestamp: new Date().toISOString()
-}]
-};
-
-fetch(webhookURL, {
-method: "POST",
-headers: { "Content-Type": "application/json" },
-body: JSON.stringify(payload)
-})
-.then(res => {
-if(res.ok){
-status.textContent = "✅ Message sent!";
-form.reset();
-}else{
-status.textContent = "❌ Failed to send.";
-}
-})
-.catch(() => {
-status.textContent = "❌ Network error.";
-});
-});
-</script>
+<footer>
+    &copy; 2026 Endertide | <a href="contact.html">Contact</a> | Privacy Policy
+</footer>
 
 </body>
 </html>
